@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url(https://i.imgur.com/3qkm0Zp.jpg);
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #000;
+        text-align: center;
+      }
+      h1 {
+        color: rgb(239, 243, 8);
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .result {
+        background-color: rgb(239, 243, 8);
+        color: rgb(12, 12, 12);
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      button {
+        background-color: rgb(247, 244, 244);
+        color:  rgb(10, 10, 10);
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 2px solid rgb(243, 245, 141);
+        font-size: 24px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sorteio Luz do Mundo</h1>
+      <button id="generate-button">Sortear número</button>
+      <div class="result"> <span id="result-number"></span></div>
+    </div>
+
+    <script>
+      const generateButton = document.querySelector("#generate-button");
+      const resultNumber = document.querySelector("#result-number");
+
+      generateButton.addEventListener("click", () => {
+        const randomNumber = Math.floor(Math.random() * 1000) + 1;
+        resultNumber.innerText = randomNumber;
+      });
+    </script>
+  </body>
+</html>
