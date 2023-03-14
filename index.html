@@ -45,7 +45,8 @@
   </head>
   <body>
     <div class="container">
-      <h1>Sorteio Luz do Mundo</h1>
+      <h1>Sorteio Grupo</h1>
+      <h1>Luz do Mundo</h1>
       <button id="generate-button">Sortear número</button>
       <div class="result"> <span id="result-number"></span></div>
     </div>
@@ -55,7 +56,7 @@
       const resultNumber = document.querySelector("#result-number");
 
       generateButton.addEventListener("click", () => {
-        const randomNumber = Math.floor(Math.random() * 1000) + 1;
+        const randomNumber = Math.floor(Math.random() * 800) + 1;
         resultNumber.innerText = randomNumber;
       });
     </script>
