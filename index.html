@@ -3,7 +3,7 @@
   <head>
     <style>
       body {
-
+        background-image: url('Sem\ Título-1.jpg');
         background-size: cover;
         height: 100vh;
         display: flex;
@@ -11,10 +11,10 @@
         justify-content: center;
       }
       .container {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.274);
         padding: 40px;
         border-radius: 10px;
-        box-shadow: 0 0 10px #000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.356);
         text-align: center;
       }
       h1 {
@@ -45,8 +45,6 @@
   </head>
   <body>
     <div class="container">
-      <h1>Sorteio Grupo</h1>
-      <h1>Luz do Mundo</h1>
       <button id="generate-button">Sortear número</button>
       <div class="result"> <span id="result-number"></span></div>
     </div>
@@ -56,7 +54,7 @@
       const resultNumber = document.querySelector("#result-number");
 
       generateButton.addEventListener("click", () => {
-        const randomNumber = Math.floor(Math.random() * 800) + 1;
+        const randomNumber = Math.floor(Math.random() * 1000) + 1;
         resultNumber.innerText = randomNumber;
       });
     </script>
