@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+  <title>Sorteio</title>
   <head>
     <style>
       body {
-        background-image: url('Sem\ Título-1.jpg');
+        background-image: url('terceiro.jpg');
         background-size: cover;
         height: 100vh;
         display: flex;
@@ -18,25 +19,25 @@
         text-align: center;
       }
       h1 {
-        color: rgb(239, 243, 8);
+        color: rgb(246, 15, 196);
         font-size: 36px;
         margin-bottom: 20px;
       }
       .result {
-        background-color: rgb(239, 243, 8);
+        background-color: rgba(243, 8, 129, 0.728);
         color: rgb(12, 12, 12);
-        padding: 20px;
-        border-radius: 10px;
-        font-size: 36px;
+        padding: 25px;
+        border-radius: 15px;
+        font-size: 18px;
         font-weight: bold;
-        margin-top: 20px;
+        margin-top: 25px;
       }
       button {
-        background-color: rgb(247, 244, 244);
+        background-color: rgb(245, 227, 243);
         color:  rgb(10, 10, 10);
         padding: 10px 20px;
         border-radius: 10px;
-        border: 2px solid rgb(243, 245, 141);
+        border: 2px solid rgb(245, 141, 210);
         font-size: 24px;
         cursor: pointer;
         margin-top: 20px;
@@ -54,7 +55,7 @@
       const resultNumber = document.querySelector("#result-number");
 
       generateButton.addEventListener("click", () => {
-        const randomNumber = Math.floor(Math.random() * 1000) + 1;
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
         resultNumber.innerText = randomNumber;
       });
     </script>
