@@ -1,68 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sorteio</title>
-  <style>
-    body {
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0;
-    }
-    .container {
-      background-color: rgba(0, 0, 0, 0.274);
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.356);
-      text-align: center;
-    }
-    h1 {
-      color: rgb(246, 15, 196);
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    .result {
-      background-color: rgba(243, 8, 129, 0.728);
-      color: rgb(12, 12, 12);
-      padding: 25px;
-      border-radius: 15px;
-      font-size: 28px;
-      font-weight: bold;
-      margin-top: 25px;
-    }
-    button {
-      background-color: rgb(245, 227, 243);
-      color:  rgb(10, 10, 10);
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: 2px solid rgb(245, 141, 210);
-      font-size: 24px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <button id="generate-button">Sortear número</button>
-    <div class="result"> <span id="result-number"></span></div>
-  </div>
+<html>
+  <title>Sorteio 3°ão</title>
+  <head>
+    <style>
+      body {
+        background-image: url('terceiro.jpg');
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        background-color: rgba(0, 0, 0, 0.274);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.356);
+        text-align: center;
+      }
+      h1 {
+        color: rgb(246, 15, 196);
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .result {
+        background-color: rgba(243, 8, 129, 0.728);
+        color: rgb(12, 12, 12);
+        padding: 25px;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 25px;
+      }
+      button {
+        background-color: rgb(245, 227, 243);
+        color:  rgb(10, 10, 10);
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 2px solid rgb(245, 141, 210);
+        font-size: 24px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="generate-button">Sortear número</button>
+      <div class="result"> <span id="result-number"></span></div>
+    </div>
 
-  <script>
-    const generateButton = document.querySelector("#generate-button");
-    const resultNumber = document.querySelector("#result-number");
-    const backgrounds = ['terceiro.jpg', 'quarto.jpg', 'quinto.jpg']; // Lista de imagens de fundo
+    <script>
+      const generateButton = document.querySelector("#generate-button");
+      const resultNumber = document.querySelector("#result-number");
 
-    generateButton.addEventListener("click", () => {
-      const randomNumber = Math.floor(Math.random() * 10) + 1; // Sortear número de 1 a 10
-      const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)]; // Selecionar uma imagem de fundo aleatória
-      document.body.style.backgroundImage = `url('${randomBackground}')`; // Definir imagem de fundo
-      resultNumber.innerText = randomNumber; // Mostrar número sorteado
-    });
-  </script>
-</body>
+      generateButton.addEventListener("click", () => {
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+        resultNumber.innerText = randomNumber;
+      });
+    </script>
+  </body>
 </html>
