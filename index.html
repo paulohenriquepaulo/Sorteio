@@ -40,7 +40,7 @@
       padding: 10px 20px;
       border-radius: 10px;
       border: 2px solid rgb(245, 141, 210);
-      font-size: 28px;
+      font-size: 24px;
       cursor: pointer;
       margin-top: 20px;
     }
@@ -56,12 +56,11 @@
     const generateButton = document.querySelector("#generate-button");
     const resultNumber = document.querySelector("#result-number");
     const backgrounds = ['terceiro.jpg', 'quarto.jpg', 'quinto.jpg']; // Lista de imagens de fundo
-    let currentBackgroundIndex = 0;
 
     generateButton.addEventListener("click", () => {
       const randomNumber = Math.floor(Math.random() * 10) + 1; // Sortear número de 1 a 10
-      document.body.style.backgroundImage = `url('${backgrounds[currentBackgroundIndex]}')`; // Definir imagem de fundo
-      currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length; // Avançar para a próxima imagem na lista
+      const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)]; // Selecionar uma imagem de fundo aleatória
+      document.body.style.backgroundImage = `url('${randomBackground}')`; // Definir imagem de fundo
       resultNumber.innerText = randomNumber; // Mostrar número sorteado
     });
   </script>
